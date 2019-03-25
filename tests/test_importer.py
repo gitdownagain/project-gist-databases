@@ -28,6 +28,10 @@ def _test_gist_from_json(db_connection, gist_data):
     assert gist[9] == gist_data['comments']
     assert gist[10] == gist_data['comments_url']
 
+# >       assert count == 7
+# E       assert 0 == 7
+# tests/test_importer.py:41: AssertionError
+# The  fetchone() fetches the next row in the result set. It returns a single tuple or None when no more row is available.
 
 @responses.activate
 def test_importer_imports_data_correctly(
